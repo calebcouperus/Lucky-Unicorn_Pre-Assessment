@@ -1,9 +1,8 @@
-"""Component 4 - Game mechanics and looping v1
+"""Component 4 - Game mechanics and looping v1.1
 Based on token generator v4 but hardwired to give donkey
 Gives user feedback about rounds played and maintains balance
 Test amount set to $5
-Doesn't work, doesn't ask for input or give output"""
-
+Updated v1 to work"""
 
 import random
 
@@ -44,3 +43,25 @@ while play_again != "X":
         else:
             token = "Horse"
             balance -= 0.5
+
+    # Output
+    print(f"Round {rounds_played}.\n"
+          f"Token: {token}\n"
+          f"Balance: ${balance:.2f}\n")
+
+    # breaks loop if out balance = 0
+    if balance == 0:
+        print("Sorry you ran out of money")
+        break
+
+    # Asking to play again
+    play_again = input("Do you want to play another round\n"
+                       "<enter> to play again or 'X' to exit\n"
+                       ">>>").upper()
+
+# Output
+print()
+print(f"Thankyou for playing\n"
+      f"You started with ${TEST_AMOUNT:.2f}\n"
+      f"and you leave with ${balance:.2f}\n"
+      f"Goodbye")
