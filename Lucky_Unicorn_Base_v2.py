@@ -29,7 +29,19 @@ def yes_no(question_text):
 def instructions():
     print("**** How to Play ****")
     print()
-    print("The rules of the game will go here")
+    print("Choose a starting amount to play with - must be between $1 and $ 10")
+    print("Then press <enter> to play. \n"
+          "You will get a random token which might be a horse, a zebra, a donkey, or a unicorn")
+    print()
+    print("It costs $1 to play each round but, depending on your prize, you "
+          "could win some of your money back. These are the payout amount:\n"
+          "\tUnicorn: $5\n"
+          "\tHorse:   $0.50\n"
+          "\tZebra:   $0.50\n"
+          "\tDonkey:  $0\n")
+    print("See if you can avoid donkeys, get the unicorns, and finish with "
+          "more money than you started with.\n")
+    print("*" * 50)
     print()
 
 
